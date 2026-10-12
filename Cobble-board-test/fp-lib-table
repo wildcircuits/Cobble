@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "Cobble_Library") (type "KiCad") (uri "${KIPRJMOD}/Cobble_Library.pretty") (options "") (descr ""))
+)

@@ -1,0 +1,40 @@
+# files specified in commandline call
+
+# common options
+zsafe=2
+zchange=35
+metric=true
+nog64=true
+nog81=true
+# board should be drawn against the top left boarder of the drawing frame
+x-offset=-12
+y-offset=12
+
+# milling options - try to make only one path around all copper structures
+zwork=-0.15
+mill-feed=125
+mill-speed=15000
+mill-diameters=0.01
+isolation-width=0.01
+milling-overlap=0
+
+# drill options
+zdrill=-3
+zmilldrill=-3
+drill-feed=125 
+drill-speed=15000
+spinup-time=0.5
+milldrill-diameter=1.55 mm
+min-milldrill-hole-diameter=1.55 mm
+drill-side=front
+
+# outline options
+cutter-diameter=1.55
+zcut=-1.8
+cut-feed=50
+cut-vertfeed=100
+cut-speed=10000
+cut-infeed=1.8
+cut-side=front
+bridges=3
+bridgesnum=2
