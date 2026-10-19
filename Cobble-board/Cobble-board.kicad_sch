@@ -4172,6 +4172,16 @@
 		)
 		(uuid "22433243-e447-478e-ba0e-4b3727f12cd9")
 	)
+	(text "get atleast 4 pins to be ADC on header\nGroup 4 pins to SPI"
+		(exclude_from_sim no)
+		(at 70.104 134.874 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "354ec313-ef6e-49d1-b970-c692ad4103a2")
+	)
 	(text "Note: This battery connector pinout \nseems to match standard adafruit batteries"
 		(exclude_from_sim no)
 		(at 234.188 59.944 0)
@@ -5760,30 +5770,6 @@
 	)
 	(global_label "TXD-GPIO43"
 		(shape input)
-		(at 59.69 175.26 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "72ed4bcd-e6b9-4480-8002-9272ae1442a1")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.589 175.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "TXD-GPIO43"
-		(shape input)
 		(at 49.53 45.72 180)
 		(fields_autoplaced yes)
 		(effects
@@ -6659,30 +6645,6 @@
 		(uuid "f088c82d-4017-43e6-af0f-bbcc611d8818")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 96.2395 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-	)
-	(global_label "RXD-GPIO44"
-		(shape input)
-		(at 59.69 172.72 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f5ca49ea-045e-4571-9da8-85d03b8583ce")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 74.8914 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8713,7 +8675,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "100k"
 			(at 246.38 144.7799 0)
 			(show_name no)
 			(do_not_autoplace no)

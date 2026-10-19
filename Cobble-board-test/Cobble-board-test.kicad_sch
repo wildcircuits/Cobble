@@ -815,7 +815,7 @@
 					)
 				)
 				(pin power_in line
-					(at -11.43 -24.13 0)
+					(at -11.43 -21.59 0)
 					(length 2.54)
 					(name "B+"
 						(effects
@@ -833,7 +833,7 @@
 					)
 				)
 				(pin power_in line
-					(at -11.43 -26.67 0)
+					(at -11.43 -24.13 0)
 					(length 2.54)
 					(name "B-"
 						(effects
@@ -843,6 +843,42 @@
 						)
 					)
 					(number "40"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -11.43 -26.67 0)
+					(length 2.54)
+					(name "ChrgBst"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "41"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -11.43 -29.21 0)
+					(length 2.54)
+					(name "ChrgBst"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "42"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3365,7 +3401,7 @@
 		)
 		(uuid "177331d5-abaa-46e3-b5a2-a0e0be33b7bf")
 	)
-	(text "Note: Use GPIO as input with pull up \nto read the switch"
+	(text "Note: Use GPIO as input with pull up \nto read the PushButton. PushButton will pull \npin low when button is pressed."
 		(exclude_from_sim no)
 		(at 165.608 157.226 0)
 		(effects
@@ -3438,7 +3474,7 @@
 		)
 		(uuid "d267305f-df3d-4d53-a588-27403fade0c2")
 	)
-	(text "Note: Use GPIO as input with pull up \nto read the vibe sensor"
+	(text "Note: Use GPIO as input with pull up \nto read the vibe sensor.  Sensor will \npull pin low during vibration event."
 		(exclude_from_sim no)
 		(at 163.068 110.236 0)
 		(effects
@@ -3575,10 +3611,6 @@
 	(no_connect
 		(at 81.28 80.01)
 		(uuid "53bd888b-4d9c-440f-8327-de913c481424")
-	)
-	(no_connect
-		(at 74.93 184.15)
-		(uuid "603ae203-b1d2-48a7-8672-e6f37d2db5d8")
 	)
 	(no_connect
 		(at 81.28 74.93)
@@ -3740,7 +3772,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 77.47) (xy 58.42 77.47)
+			(xy 48.26 77.47) (xy 58.42 77.47)
 		)
 		(stroke
 			(width 0)
@@ -3767,6 +3799,16 @@
 			(type default)
 		)
 		(uuid "42691559-a92d-4fc9-a6dd-f1eef266709e")
+	)
+	(wire
+		(pts
+			(xy 53.34 74.93) (xy 58.42 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4598a543-4dfb-489b-81ef-cc0c24d6ff0c")
 	)
 	(wire
 		(pts
@@ -3860,7 +3902,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 80.01) (xy 53.34 81.28)
+			(xy 53.34 80.01) (xy 53.34 82.55)
 		)
 		(stroke
 			(width 0)
@@ -4107,6 +4149,16 @@
 			(type default)
 		)
 		(uuid "a1c83832-147b-47b7-906a-99219b9c9bea")
+	)
+	(wire
+		(pts
+			(xy 53.34 82.55) (xy 58.42 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a59eb2df-f82f-47a1-9a04-02b7c20b1158")
 	)
 	(wire
 		(pts
@@ -4438,19 +4490,19 @@
 		)
 		(uuid "fbc7d535-adb7-4fef-9534-79ae8488f1b2")
 	)
-	(global_label "GPIO13"
+	(global_label "LightSense"
 		(shape input)
-		(at 74.93 184.15 0)
+		(at 49.53 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "05b93345-1252-4b45-a16a-e35273bbb678")
+		(uuid "125d52f5-4709-4c0c-9a33-98ef5e189f50")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 84.8095 184.15 0)
+			(at 36.3244 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4458,7 +4510,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -4680,7 +4732,7 @@
 	)
 	(global_label "VBatt_SW"
 		(shape input)
-		(at 53.34 77.47 180)
+		(at 53.34 74.93 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4690,7 +4742,7 @@
 		)
 		(uuid "8e654137-1491-431f-86bc-3818a153cd91")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 41.7673 77.47 0)
+			(at 41.7673 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5035,30 +5087,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-			)
-		)
-	)
-	(global_label "GPIO5"
-		(shape input)
-		(at 49.53 60.96 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "e43ce090-09c0-449d-aacf-83f0dd4196da")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 40.86 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 			)
 		)
 	)
@@ -5839,6 +5867,12 @@
 		)
 		(pin "16"
 			(uuid "d82e8200-498f-48b2-9e50-27bf79821779")
+		)
+		(pin "42"
+			(uuid "a0fb9f03-f926-487e-81c0-aa8acf258336")
+		)
+		(pin "41"
+			(uuid "d4ab31c7-811d-4f79-b76b-14b233071a3e")
 		)
 		(instances
 			(project "Cobble-board-test"
@@ -7532,7 +7566,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 53.34 81.28 0)
+		(at 48.26 77.47 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7543,7 +7577,7 @@
 		(fields_autoplaced yes)
 		(uuid "ca8b838f-fcf7-44b7-805c-b5d012d2af9f")
 		(property "Reference" "#PWR013"
-			(at 53.34 87.63 0)
+			(at 48.26 83.82 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7554,7 +7588,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 53.34 86.36 0)
+			(at 48.26 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7564,7 +7598,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 53.34 81.28 0)
+			(at 48.26 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7575,7 +7609,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 81.28 0)
+			(at 48.26 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7586,7 +7620,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 53.34 81.28 0)
+			(at 48.26 77.47 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

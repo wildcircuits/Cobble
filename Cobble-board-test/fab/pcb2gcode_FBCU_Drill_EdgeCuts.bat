@@ -1,1 +1,1 @@
-C:\Users\timog\OneDrive\Files\_CNC\pcb2gcode-2.4.0\pcb2gcode.exe --drill=C:\Users\timog\OneDrive\Files\Cobble\Cobble-board\fab\Cobble-board.drl --outline=C:\Users\timog\OneDrive\Files\Cobble\Cobble-board\fab\Cobble-board-Edge_Cuts.gbr --outline-output=EdgeCuts.gcode
+C:\Users\timog\OneDrive\Files\_CNC\pcb2gcode-2.4.0\pcb2gcode.exe --drill=C:\Users\timog\OneDrive\Files\Cobble\Cobble-board-test\fab\Cobble-board-test.drl --outline=C:\Users\timog\OneDrive\Files\Cobble\Cobble-board-test\fab\Cobble-board-test-Edge_Cuts.gbr --outline-output=EdgeCuts.gcode
