@@ -9,7 +9,7 @@ the Cobble-board-test/ folder contains the single layer layout design used for t
 
 ### Pin mapping
 | ESP32-S3-super-mini Pin | Function | Notes | CircuitPython |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | GPIO5 / ADC1_CH4 | Light Sensor | Read analog value for representative light level measurements. | board.A4 |
 | GPIO39 | Light Sensor | this pin is digital only and should be set to input no pull up/down | board.IO39 |
 | GPIO40 | Vibration Sensor | configure pin as input with pull up.  vibration will be active low | board.IO40 |
