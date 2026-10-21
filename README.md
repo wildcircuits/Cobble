@@ -38,27 +38,103 @@ Testing completed with:
   - UID
   - MAC
 
-
-#### API quirks for this build (10.3.1, waveshare_esp32_s3_zero)
-These differ from the generic CircuitPython docs and from other builds.
-
-- **Pin objects**: digital pins are `board.IOx` (e.g. `board.IO9`), not `board.GPIOx`.
-  The analog light pin is `board.A4` (GPIO5 / ADC1_CH4).
-- **Analog input**: use `analogio.AnalogIn(pin)`. There is no `board.ADC()`.
-  Read the value with `.value` (0–65535), not `.read_value`.
-- **Digital input**: set direction with `digitalio.Direction.INPUT`, not
-  `digitalio.DigitalInOut.DIR_INPUT`.
-- **Digital input PullUp**: set a pull p with `.pull = digitalio.Pull.UP`
-- **I2C**: there is no top-level `i2c` module and no `board.I2C()`. Use
-  `busio.I2C(scl_pin, sda_pin)`.
-- **I2C scan**: the `I2C` object has no `probe_addr()` method. Scan by trying
-  `i2c.writeto(addr, b"")` for each address while holding `i2c.try_lock()`.
-- **PWM**: `PWMOut.frequency` is read-only — you cannot retune a running PWM
-  object. To change frequency, `deinit()` the object and create a new
-  `pwmio.PWMOut(pin, frequency=..., duty_cycle=...)`.
+#### Tips & tricks
+- **Pin objects**: 
+  - Digital pins are `board.IOx` (e.g. `board.IO9`)
+  - The analog light pin is `board.A4` (GPIO5 / ADC1_CH4).
+- **Analog input**: 
+  - Use `analogio.AnalogIn(pin)`. There is no `board.ADC()`.
+  - Read the value with `.value` (0–65535)
+- **Digital input**: 
+  - set direction with `digitalio.Direction.INPUT`
+- **Digital input Pull UP / DOWN**: 
+  - set a pull up with `.pull = digitalio.Pull.UP`
+  - set a pull down with `.pull = digitalio.Pull.DOWN`
+- **I2C**: 
+  - Use `busio.I2C(scl_pin, sda_pin)` to configure the I2C
 - **NeoPixel**: the constructor is `neopixel.NeoPixel(pin, n, brightness=...)` —
   the `pixel_bit_depth` keyword is not accepted on this build.
 - **Light Sensor**: due to a design issue the lightsensor is connected to IO39 and A4.  reading the light sensor is done with A4, but IO39 needs to be set as an input without configuring a pull up so it does not impact the reading of A4.
+
+### Example Code Snippets
+#### **I2C**: Configure I2C bus and scan for devices
+``` python
+i2c = busio.I2C(board.IO6, board.IO7)  # SCL, SDA for J3/J4 connectors
+def scan_i2c():`
+    """Scan the I2C bus and return list of connected device addresses."""
+    devices = []
+    if not i2c.try_lock():
+        return devices
+    try:
+        for addr in range(0x08, 0x78):
+            try:
+                i2c.writeto(addr, b"")
+                devices.append(addr)
+            except OSError:
+                pass
+    finally:
+        i2c.unlock()
+    return devices
+
+```
+#### **Speaker**: Configure pin for PWM and play tone
+``` python
+piezo = pwmio.PWMOut(board.IO8, frequency=440, duty_cycle=0, variable_frequency=True)
+
+# 8 notes of a C Major octave (C5 to C6) in Hertz
+OCTAVE_NOTES = [
+    523,  # C5
+    587,  # D5
+    659,  # E5
+    698,  # F5
+    784,  # G5
+    880,  # A5
+    988,  # B5
+]
+
+def startup_song():
+    # Loop through each note in the octave scale
+    for freq in OCTAVE_NOTES:
+        piezo.frequency = freq
+        piezo.duty_cycle = 32768  # Start tone (50% duty cycle)
+        time.sleep(0.1)           # Play note for 0.1s
+    
+    # Mute tone and clean up hardware resource
+    piezo.duty_cycle = 0
+
+```
+#### **RGB LED Neopixel**: Configure pin and show RGB colors
+``` python
+import neopixel
+
+# Initialize NeoPixel on the default board pin (or replace board.NEOPIXEL with board.IOx)
+pixel = neopixel.NeoPixel(board.IO48, 1, brightness=0.2)
+
+# Set color to Green (RGB: Red=0, Green=255, Blue=0)
+pixel[0] = (0, 255, 0)
+
+def wheel(pos):
+    """Return an RGB tuple for a position 0-255 around the color wheel."""
+    pos %= 256
+    if pos < 85:
+        return (255 - pos * 3, pos * 3, 0)
+    elif pos < 170:
+        pos -= 85
+        return (0, 255 - pos * 3, pos * 3)
+    else:
+        pos -= 170
+        return (pos * 3, 0, 255 - pos * 3)
+
+# Rainbow fade state: hue position (0-255) and per-step increment
+hue = 0
+HUE_STEP = 2  # higher = faster cycle
+
+def rainbow():
+    """Advance the hue and set the pixel to the new rainbow color."""
+    global hue
+    hue = (hue + HUE_STEP) % 256
+    pixel[0] = wheel(hue)
+```
 
 #### Included modules:
 _asyncio
