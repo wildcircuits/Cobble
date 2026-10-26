@@ -4,9 +4,21 @@
 	(generator_version "10.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at 0 2.8 0)
+		(at 2.6 -2.4 180)
 		(layer "F.SilkS")
-		(uuid "f00f2926-66cd-4d02-9e60-c8133e7ce421")
+		(uuid "23fda288-6fbe-4c2f-a1c4-d55784167276")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.1)
+				(bold yes)
+			)
+		)
+	)
+	(property "Value" "GT36528"
+		(at -6.399999 0 180)
+		(layer "F.Fab")
+		(uuid "aea91cd7-5200-40bc-91dd-a7e81d6833df")
 		(effects
 			(font
 				(size 1 1)
@@ -14,39 +26,31 @@
 			)
 		)
 	)
-	(property "Value" "LDR"
-		(at 0 -2.8 0)
-		(layer "F.Fab")
-		(uuid "abdd3f18-10e8-419c-b71c-394d96e3eb49")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Datasheet" ""
-		(at 0 0 0)
+	(property "Datasheet" "https://www.lcsc.com/datasheet/C2904881.pdf"
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "1957a1e7-c164-4e03-b1d5-c6a157c08fef")
+		(uuid "b1fa5079-98d8-40cc-8175-d3e280e347d3")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(property "Description" ""
-		(at 0 0 0)
+	(property "Description" "light dependent resistor"
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "1b07d0a9-b489-4d6a-8975-0a388042b99e")
+		(uuid "3e41056d-9e42-4c87-b1cf-2ed7d466b4cc")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
+	(property ki_fp_filters "R*LDR*D6.4*P3.4*")
+	(sheetname "/")
+	(sheetfile "Cobble-board-test.kicad_sch")
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
@@ -57,7 +61,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "c3cd7c25-2f0b-4fe1-94c8-8f83a1074746")
+		(uuid "66a189df-8279-47b7-8fc3-41c8d18761e2")
 	)
 	(fp_line
 		(start -3 1)
@@ -67,7 +71,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "dd5e8ce8-db09-4393-a268-679d4cf13f24")
+		(uuid "c7799996-b773-4147-9c78-f5764f99187c")
 	)
 	(fp_line
 		(start -2.2 1.8)
@@ -77,7 +81,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "6e28b3b8-b592-4bd0-905d-079f4f4e4d60")
+		(uuid "dba73223-7ce3-44dd-8305-cee0e9e5c5a3")
 	)
 	(fp_line
 		(start 3 -1.8)
@@ -87,7 +91,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "cd397575-6182-45f4-874f-9a276043f6f6")
+		(uuid "a6a37488-2f50-4097-8ffe-aa1683209138")
 	)
 	(fp_line
 		(start 3 1.8)
@@ -97,7 +101,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "a897f079-7ed2-443c-a4dd-d52b7f2197f2")
+		(uuid "28808ece-c2b3-448d-8046-c5279a852745")
 	)
 	(fp_line
 		(start -2.75 -1.55)
@@ -107,7 +111,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "8435630d-6e5a-4b93-b068-167aefcee262")
+		(uuid "38e36229-9392-4fec-86a5-006b9853d44f")
 	)
 	(fp_line
 		(start -2.75 1.55)
@@ -117,7 +121,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "977ca053-5f49-4875-9cd9-435e928581a7")
+		(uuid "f10d5386-528a-474f-9405-329a40d8a91a")
 	)
 	(fp_line
 		(start 2.75 -1.55)
@@ -127,7 +131,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "e5148739-a8a9-4f1e-9add-14c2886b338b")
+		(uuid "41014956-c38b-4b8f-a885-2e58beb9f24b")
 	)
 	(fp_line
 		(start 2.75 1.55)
@@ -137,21 +141,21 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "666ca07f-1aef-469b-adc7-c8b33c8864c0")
+		(uuid "d45aad81-3430-4ba4-b6db-21c724f9c5e6")
 	)
 	(pad "1" smd rect
 		(at -1.6 0)
 		(size 1.8 2.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "e3d56218-de9a-4582-9505-6a924ca431d4")
+		(uuid "131148b1-93a1-4269-b0fb-987d7b49d721")
 	)
 	(pad "2" smd rect
 		(at 1.6 0)
 		(size 1.8 2.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "b1bcf1ce-385b-45eb-a28c-bb1095d7c785")
+		(uuid "1da12126-59a0-4d98-9f6e-ee84293d7775")
 	)
 	(embedded_fonts no)
 )

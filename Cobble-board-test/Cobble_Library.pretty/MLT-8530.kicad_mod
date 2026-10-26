@@ -4,20 +4,20 @@
 	(generator_version "10.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at -5.85 0 90)
+		(at 3.65 5.4 0)
 		(layer "F.SilkS")
-		(uuid "11b5760f-15e3-4fb0-a450-038a335a87b1")
+		(uuid "61781c29-8f18-478a-9c22-0359fa291e40")
 		(effects
 			(font
-				(size 1 1)
-				(thickness 0.15)
+				(size 0.5 0.5)
+				(thickness 0.1)
 			)
 		)
 	)
 	(property "Value" "MLT-8530"
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
-		(uuid "6770e714-5a48-4c6b-8c7e-0670fe0435ed")
+		(uuid "b4427e92-c72c-4ecd-aabe-c224e6c80230")
 		(effects
 			(font
 				(size 1 1)
@@ -26,27 +26,29 @@
 		)
 	)
 	(property "Datasheet" ""
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "9d30519f-de8c-43b5-a805-865eca336c30")
+		(uuid "27ec94aa-c022-4025-9083-6f6b9fc6dfca")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(property "Description" ""
-		(at 0 0 0)
+	(property "Description" "Speaker"
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "496910cc-9479-4d17-b634-e940dcdd850f")
+		(uuid "93294153-5ad2-43a4-b180-3a93c45fd47d")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
+	(sheetname "/")
+	(sheetfile "Cobble-board-test.kicad_sch")
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
@@ -57,27 +59,27 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "d900384c-e367-4f3a-a684-f509177777f7")
+		(uuid "27550ffc-4ecf-4495-9f80-c0ad2a845327")
 	)
 	(fp_line
-		(start -4.85 4.05)
+		(start -4.849999 4.05)
 		(end -4.85 -4.85)
 		(stroke
 			(width 0.12)
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "8790d385-b705-4604-a208-0e750bb74331")
+		(uuid "3b2f11b3-0d4d-4947-aa26-13fe4534141a")
 	)
 	(fp_line
-		(start -4.05 4.85)
-		(end -4.85 4.05)
+		(start -4.05 4.849999)
+		(end -4.849999 4.05)
 		(stroke
 			(width 0.12)
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "8d6375a4-f77a-4226-befc-8a0dbc13d818")
+		(uuid "a933df0f-ca5e-4f29-8e33-60ed9e9a9d0a")
 	)
 	(fp_line
 		(start 4.85 -4.85)
@@ -87,17 +89,17 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "ce23ff69-4241-467f-b180-b3202f858d45")
+		(uuid "6157dd51-1a59-4fc7-954b-f41c1963a88e")
 	)
 	(fp_line
 		(start 4.85 4.85)
-		(end -4.05 4.85)
+		(end -4.05 4.849999)
 		(stroke
 			(width 0.12)
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "f286c93f-7401-4cb5-885b-947003d07612")
+		(uuid "30159a74-de40-4759-96a0-d6df930ab270")
 	)
 	(fp_line
 		(start -4.6 -4.6)
@@ -107,7 +109,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "85ee7b9a-04f2-49e6-a59e-b623b5f0401b")
+		(uuid "7848d4cd-9bd9-40ee-8fb2-500e8e1dff87")
 	)
 	(fp_line
 		(start -4.6 4.6)
@@ -117,7 +119,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "b47a2be0-1554-4a77-8321-3169a0feca7f")
+		(uuid "2695dc6d-0f59-448d-aa44-98d866c7065d")
 	)
 	(fp_line
 		(start 4.6 -4.6)
@@ -127,7 +129,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "f34f6f5f-d9e4-4d94-bec3-13890c4f1f4f")
+		(uuid "4beedf75-5b9a-4d07-a49b-3621d19f483c")
 	)
 	(fp_line
 		(start 4.6 4.6)
@@ -137,35 +139,35 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "a93484eb-0511-4305-9dfa-54937e10262b")
+		(uuid "fe435cc5-4d3e-4c06-8aba-db796a56e4b9")
 	)
 	(pad "1" smd rect
 		(at 3.55 3.55)
 		(size 1.6 1.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "6117e680-0c72-40c5-b953-77137e1fe8d5")
+		(uuid "41f3bddd-5c36-4bf2-be42-8aa49a8b8611")
 	)
 	(pad "2" smd rect
 		(at 3.55 -3.55)
 		(size 1.6 1.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "a96a14ca-e255-4f56-84ea-c921a3d9ca83")
+		(uuid "d9b374c0-d02c-495c-8bc9-d0f15f4f54ec")
 	)
 	(pad "3" smd rect
 		(at -3.55 3.55)
 		(size 1.6 1.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "cefd05e1-ff0f-4776-98c9-fb1d66843a5d")
+		(uuid "2cec0fda-1426-40a8-9de9-68116e9381be")
 	)
 	(pad "4" smd rect
 		(at -3.55 -3.55)
 		(size 1.6 1.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "4eb5b75f-2807-400f-89ed-fe826d4ed1fd")
+		(uuid "2fdbdd8a-504b-43cf-a931-f989aa167868")
 	)
 	(embedded_fonts no)
 )

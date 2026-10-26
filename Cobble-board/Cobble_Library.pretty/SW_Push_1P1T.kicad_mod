@@ -1,0 +1,220 @@
+(footprint "SW_Push_1P1T"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Tactile switch, 6.2x6.25 mm, H7.7 mm, gullwing leads, https://www.ckswitches.com/media/1972/ksc6.pdf")
+	(tags "CK C&K SPST")
+	(property "Reference" "REF**"
+		(at 0 4.24 0)
+		(layer "F.SilkS")
+		(uuid "d2e6cf44-9fbe-4281-8528-91bce607b578")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SW_Push_1P1T"
+		(at 0 -4.23 0)
+		(layer "F.Fab")
+		(uuid "9ae62ab3-56b4-47ff-8e6b-ab0f90aa114f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "600369d7-8916-4a16-b164-450c1f411153")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a12ea810-f206-4991-9fd4-4db771f97efa")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -3.21 -3.235)
+		(end -3.21 -2.9)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "616f446e-5a6d-4202-80df-d884591bf792")
+	)
+	(fp_line
+		(start -3.21 -1.6)
+		(end -3.21 1.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e0d3f349-9999-44da-93ec-caf5f441d01f")
+	)
+	(fp_line
+		(start -3.21 2.9)
+		(end -3.21 3.235)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "27c23c63-2e20-45de-8d86-ca583de03e4f")
+	)
+	(fp_line
+		(start -3.21 3.235)
+		(end 3.21 3.235)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "009365e9-bd26-4c79-973c-9415680c6b2a")
+	)
+	(fp_line
+		(start 3.21 -3.235)
+		(end -3.21 -3.235)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "77fea442-c7da-4dbd-afc5-0d04c679c2d4")
+	)
+	(fp_line
+		(start 3.21 -2.9)
+		(end 3.21 -3.235)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6794c617-a8d3-4c06-865b-34d83a591a58")
+	)
+	(fp_line
+		(start 3.21 1.6)
+		(end 3.21 -1.6)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0401e08a-8a56-4927-a8fa-15f92f2ec63b")
+	)
+	(fp_line
+		(start 3.21 3.235)
+		(end 3.21 2.93)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f41259c2-bdb9-4074-97c6-6dcc1c8127c8")
+	)
+	(fp_rect
+		(start -6.25 -3.38)
+		(end 6.25 3.38)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "98ba8654-110a-490a-8bdd-b510bb6a6038")
+	)
+	(fp_rect
+		(start -3.1 -3.125)
+		(end 3.1 3.125)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "18542f3d-d69f-44ec-8a73-f4c04f2480f1")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 1.475 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "aa305d8a-d4a1-4fc8-8cc4-9422a5c4d95e")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "e6706e9e-1530-4b44-92ce-9690a3ca6c76")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -4.45 -2.25)
+		(size 3.1 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "e864a8b8-84e6-4d01-930f-4dbcfe6e48eb")
+	)
+	(pad "1" smd roundrect
+		(at 4.45 -2.25)
+		(size 3.1 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "988d3f50-5a28-45e9-a51a-99ef8bba03a9")
+	)
+	(pad "2" smd roundrect
+		(at -4.45 2.25)
+		(size 3.1 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "ff07248c-63f4-4928-bc95-579305c34129")
+	)
+	(pad "2" smd roundrect
+		(at 4.45 2.25)
+		(size 3.1 1)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "9d7ddd51-b69c-4d8c-a48f-d4d5f0baded1")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Button_Switch_SMD.3dshapes/SW_Push_1P1T_NO_CK_KSC6xxG.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

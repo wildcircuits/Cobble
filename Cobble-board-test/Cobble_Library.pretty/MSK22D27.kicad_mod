@@ -4,20 +4,21 @@
 	(generator_version "10.0")
 	(layer "F.Cu")
 	(property "Reference" "REF**"
-		(at -5.4 0 90)
+		(at -4 -2.775 90)
 		(layer "F.SilkS")
-		(uuid "bfe0d00e-8a5d-40dc-bdf4-57674718ebdc")
+		(uuid "0c24fcbd-974a-4661-93d1-590faff3f30f")
 		(effects
 			(font
-				(size 1 1)
-				(thickness 0.15)
+				(size 0.5 0.5)
+				(thickness 0.1)
+				(bold yes)
 			)
 		)
 	)
-	(property "Value" "DPDT"
-		(at 0 0 0)
+	(property "Value" "MSK22D27"
+		(at 0 0 180)
 		(layer "F.Fab")
-		(uuid "c4f4b8f9-603d-402d-b942-d9c2bd67a0f4")
+		(uuid "93ae860f-73d3-48ad-9d91-25f7f35186f3")
 		(effects
 			(font
 				(size 1 1)
@@ -26,27 +27,29 @@
 		)
 	)
 	(property "Datasheet" ""
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "abf81b09-2ed2-4072-8f81-7e5eee8e23e9")
+		(uuid "dd89f814-8494-48ef-8698-1cc5282ebf45")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(property "Description" ""
-		(at 0 0 0)
+	(property "Description" "Slide Switch, dual pole double throw"
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "e0db3b3e-08d2-459b-856a-113679907c37")
+		(uuid "2117af3c-5438-4cb1-b465-3d313571b2b5")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
+	(sheetname "/")
+	(sheetfile "Cobble-board-test.kicad_sch")
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
@@ -57,7 +60,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "7cd7eda6-365e-4e06-88c7-9b910ab0dddc")
+		(uuid "2e288c81-195a-4a35-a508-f8e250eb344f")
 	)
 	(fp_line
 		(start -4.5 0)
@@ -67,7 +70,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "059f946b-a207-4ffa-88dc-643176ea384a")
+		(uuid "1e8100ce-4125-401b-8911-800aee353765")
 	)
 	(fp_line
 		(start -4.5 1.8)
@@ -77,7 +80,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "935f880f-20c6-497f-9060-0ac6ead87dad")
+		(uuid "fe59972a-d133-4b69-b22e-375ea079b088")
 	)
 	(fp_line
 		(start 4.5 -1.8)
@@ -87,7 +90,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "1682f539-9018-41ef-b5a9-7a92422f3f11")
+		(uuid "683797e4-661d-42d1-bc3a-936456fb68d3")
 	)
 	(fp_line
 		(start 4.5 0)
@@ -97,7 +100,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "ec3de177-3af3-4af6-b9c8-e7e6c20a1826")
+		(uuid "de89f044-9ff3-4586-b6d4-e832066c2316")
 	)
 	(fp_line
 		(start 4.5 1.8)
@@ -107,7 +110,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "3bf85b2a-70bc-474d-b736-4ba6da8382f5")
+		(uuid "d38931ce-771f-4e17-9359-7235ca61dfc8")
 	)
 	(fp_line
 		(start -4.6 -4.5)
@@ -117,7 +120,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "ee670854-e00a-4dfc-8edb-94a648824dce")
+		(uuid "d0e5476e-639b-4be4-b750-dcce14a60e7d")
 	)
 	(fp_line
 		(start -4.6 4.5)
@@ -127,7 +130,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "ec0366a7-ec36-4f2c-a1f5-41af6856cb5e")
+		(uuid "9ee76d22-ae1f-45f5-8db9-6c1b7d8466ad")
 	)
 	(fp_line
 		(start -3.45 -4.5)
@@ -137,7 +140,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "58c71d24-cf97-433d-a81a-47de949dc9bb")
+		(uuid "b64c059b-d996-4e2f-b94e-92f5ad31a387")
 	)
 	(fp_line
 		(start -3.45 -4.5)
@@ -147,7 +150,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "5f260855-a06d-474b-b58a-40aafee24566")
+		(uuid "35dcf361-c73c-4a5d-a01a-e1c84e1838b1")
 	)
 	(fp_line
 		(start 3.45 4.5)
@@ -157,7 +160,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "f6b455db-d19e-4443-a2cd-6e149f5596eb")
+		(uuid "b661ddc2-7d5f-4bfb-a1da-311726b21848")
 	)
 	(fp_line
 		(start 3.45 4.5)
@@ -167,7 +170,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "90aeaeb0-4d91-4f3c-b433-8410d8963892")
+		(uuid "a5fdc573-f1f1-487c-86f9-87c014241108")
 	)
 	(fp_line
 		(start 4.6 -4.5)
@@ -177,7 +180,7 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "7e395b14-fc19-4762-8a5c-9bc886fbf861")
+		(uuid "b8aeb7a2-6ad8-400b-8a49-4038e62fa811")
 	)
 	(fp_line
 		(start 4.6 4.5)
@@ -187,77 +190,77 @@
 			(type default)
 		)
 		(layer "F.CrtYd")
-		(uuid "16c32e2e-bf85-460c-ae24-27a28fec7176")
+		(uuid "04404fdd-d276-42ad-8721-15b489f1e144")
 	)
 	(pad "" np_thru_hole circle
 		(at -3.5 -1)
 		(size 0.8 0.8)
 		(drill 0.8)
 		(layers "*.Mask")
-		(uuid "51ca75c6-ccfc-4525-ac7b-6b4037156649")
+		(uuid "84419a57-3786-4c67-b61a-21f820cc050c")
 	)
 	(pad "" np_thru_hole circle
 		(at -3.5 1)
 		(size 0.8 0.8)
 		(drill 0.8)
 		(layers "*.Mask")
-		(uuid "3b5faac9-20d0-452f-b50c-59cada580b16")
+		(uuid "6a2e9048-5b5d-44da-afe0-ea6abc2d40b3")
 	)
 	(pad "" np_thru_hole circle
 		(at 3.5 -1)
 		(size 0.8 0.8)
 		(drill 0.8)
 		(layers "*.Mask")
-		(uuid "0f82aefd-8326-45e8-97a1-e584e96f3b8f")
+		(uuid "a683e4fa-ac08-4341-b0c6-0e7619bff7da")
 	)
 	(pad "" np_thru_hole circle
 		(at 3.5 1)
 		(size 0.8 0.8)
 		(drill 0.8)
 		(layers "*.Mask")
-		(uuid "da224d2a-865a-43a1-9521-d610db496e5d")
+		(uuid "59578ec9-954e-4439-975e-fc87fb2e856e")
 	)
 	(pad "1" smd rect
 		(at -2.5 3.025)
 		(size 1.4 2.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "2cc00be7-d08c-4217-a64a-d662caa78904")
+		(uuid "3bd79476-94e8-4a47-ae27-6251c80d9c92")
 	)
 	(pad "2" smd rect
 		(at 0 3.025)
 		(size 1.4 2.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "9d8904dc-a8cd-461d-bf30-b214262a14d3")
+		(uuid "d4d1cc1b-0b05-433f-98dc-cb6e62ca7301")
 	)
 	(pad "3" smd rect
 		(at 2.5 3.025)
 		(size 1.4 2.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "94154502-8406-4cf1-9381-226c91e6dce0")
+		(uuid "d561ea9b-14bf-44be-a6f9-b5c93f411074")
 	)
 	(pad "4" smd rect
 		(at 2.5 -3.025)
 		(size 1.4 2.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "4c11056c-359b-459c-b297-8ff2576c9ee8")
+		(uuid "fd8fb89c-f8bf-488d-aad5-26efb1d26939")
 	)
 	(pad "5" smd rect
 		(at 0 -3.025)
 		(size 1.4 2.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "b4396ae8-fa08-40d6-81fc-e9b9309cc325")
+		(uuid "a7e50cc7-e037-47d0-87da-9b2136d148dd")
 	)
 	(pad "6" smd rect
 		(at -2.5 -3.025)
 		(size 1.4 2.45)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(thermal_bridge_angle 45)
-		(uuid "f8154ca1-48ed-46b1-8c1c-eb5193846c78")
+		(uuid "83016880-a46e-410c-9281-3d830bfa666c")
 	)
 	(embedded_fonts no)
 )
