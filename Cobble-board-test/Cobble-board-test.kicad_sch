@@ -5715,7 +5715,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Cobble_Library:ESP32S3-supermini"
+		(property "Footprint" "Cobble_Library:ESP32S3-supermini-v2"
 			(at 69.85 53.34 0)
 			(hide yes)
 			(show_name no)
