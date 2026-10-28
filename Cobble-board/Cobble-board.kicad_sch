@@ -4364,6 +4364,12 @@
 		(uuid "f766d41d-fd5c-4d9c-9db9-427483cea202")
 	)
 	(junction
+		(at 121.92 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0853df64-a7d8-4961-90e9-08545591a18b")
+	)
+	(junction
 		(at 243.84 147.32)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4388,6 +4394,12 @@
 		(uuid "4358efaa-2f76-4dac-9d64-d1852a25996c")
 	)
 	(junction
+		(at 114.3 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "51e45d02-bf51-4746-b3d6-79a5140e1400")
+	)
+	(junction
 		(at 246.38 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4400,10 +4412,22 @@
 		(uuid "9b5e18a8-0a50-4347-bdb0-ab18ab75a1a6")
 	)
 	(junction
+		(at 114.3 139.7)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c269f9c8-afee-4572-9e83-b131ceadf5e9")
+	)
+	(junction
 		(at 246.38 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d0c6acfe-cae2-4a8f-8eec-48ae7f764571")
+	)
+	(junction
+		(at 121.92 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d78c9951-98db-47f5-b238-4e5634c7c95c")
 	)
 	(junction
 		(at 123.19 139.7)
@@ -4853,6 +4877,16 @@
 	)
 	(wire
 		(pts
+			(xy 121.92 135.89) (xy 121.92 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bc173ca-4ac8-4ac2-bf2e-617998aac30a")
+	)
+	(wire
+		(pts
 			(xy 259.08 36.83) (xy 246.38 36.83)
 		)
 		(stroke
@@ -4910,6 +4944,16 @@
 			(type default)
 		)
 		(uuid "66342214-94fd-4219-991e-f9d1c20781a2")
+	)
+	(wire
+		(pts
+			(xy 114.3 142.24) (xy 114.3 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6651db28-f34d-4070-bc8d-613528592837")
 	)
 	(wire
 		(pts
@@ -5060,6 +5104,16 @@
 			(type default)
 		)
 		(uuid "833674be-257d-4a6c-919a-83e286938155")
+	)
+	(wire
+		(pts
+			(xy 114.3 135.89) (xy 114.3 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85c8c8f3-7718-4c66-9dc6-af0ea16f5991")
 	)
 	(wire
 		(pts
@@ -5600,6 +5654,16 @@
 			(type default)
 		)
 		(uuid "ee3aa642-4255-4b03-81b0-85f4d4dcf33b")
+	)
+	(wire
+		(pts
+			(xy 121.92 142.24) (xy 121.92 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0371a20-a1eb-47bc-887a-488b602847d6")
 	)
 	(wire
 		(pts
@@ -9737,6 +9801,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_US")
+		(at 118.11 146.05 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "e157bbc1-9a66-4fa7-94b9-71ac24cffa65")
+		(property "Reference" "R7"
+			(at 118.11 150.876 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4k7"
+			(at 118.11 148.336 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+			(at 118.364 145.034 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 118.11 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "872bff20-6b37-45d7-8918-8c0ffe823015")
+		)
+		(pin "1"
+			(uuid "ff20a258-05df-4fa3-b94a-bc3fc3652a1a")
+		)
+		(instances
+			(project "Cobble-board"
+				(path "/a406977b-4a61-446e-8bbe-f17f66d17476"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Cobble_Library:ESP32S2-supermini")
 		(at 72.39 50.8 0)
 		(unit 1)
@@ -10009,6 +10152,86 @@
 			(project "Cobble-board"
 				(path "/a406977b-4a61-446e-8bbe-f17f66d17476"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 118.11 135.89 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "eeeb54ea-33a4-4176-8273-114882751551")
+		(property "Reference" "R6"
+			(at 118.11 129.54 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "4k7"
+			(at 118.11 132.08 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal"
+			(at 118.364 134.874 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 118.11 135.89 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "0e1794cd-6e6a-4a4b-b587-bd3a321254f4")
+		)
+		(pin "1"
+			(uuid "fd55fa76-82cf-4ee8-89a5-f5c66143e472")
+		)
+		(instances
+			(project "Cobble-board"
+				(path "/a406977b-4a61-446e-8bbe-f17f66d17476"
+					(reference "R6")
 					(unit 1)
 				)
 			)
