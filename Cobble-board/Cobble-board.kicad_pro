@@ -263,7 +263,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "1"
+      "sch_revision": "2"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -545,11 +545,14 @@
   },
   "pcbnew": {
     "last_paths": {
+      "gencad": "",
       "idf": "",
       "netlist": "",
       "plot": "fab/",
+      "pos_files": "",
       "specctra_dsn": "",
       "step": "",
+      "svg": "",
       "vrml": ""
     },
     "page_layout_descr_file": ""

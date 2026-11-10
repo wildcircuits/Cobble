@@ -5,16 +5,16 @@
       "Application": "Pcbnew",
       "Version": "10.0.6"
     },
-    "CreationDate": "2026-10-11T09:58:56-04:00"
+    "CreationDate": "2026-11-09T19:19:06-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "Cobble-board",
       "GUID": "436f6262-6c65-42d6-926f-6172642e6b69",
-      "Revision": "1"
+      "Revision": "2"
     },
     "Size": {
-      "X": 42.05,
+      "X": 46.05,
       "Y": 45.05
     },
     "LayerNumber": 2,
@@ -26,7 +26,10 @@
       "Layers": "Outer",
       "PadToPad": 0.2,
       "PadToTrack": 0.2,
-      "TrackToTrack": 0.2
+      "TrackToTrack": 0.2,
+      "MinLineWidth": 0.2,
+      "TrackToRegion": 0.2,
+      "RegionToRegion": 0.2
     }
   ],
   "FilesAttributes": [
@@ -59,6 +62,16 @@
       "Path": "Cobble-board-B_Silkscreen.gbr",
       "FileFunction": "Legend,Bot",
       "FilePolarity": "Positive"
+    },
+    {
+      "Path": "Cobble-board-F_Mask.gbr",
+      "FileFunction": "SolderMask,Top",
+      "FilePolarity": "Negative"
+    },
+    {
+      "Path": "Cobble-board-B_Mask.gbr",
+      "FileFunction": "SolderMask,Bot",
+      "FilePolarity": "Negative"
     },
     {
       "Path": "Cobble-board-Edge_Cuts.gbr",
