@@ -1,0 +1,15 @@
+Reference,Qty,Value,DNP,Exclude from BOM,Exclude from Board,Exclude from Simulation,Exclude from Position Files,Footprint,Description
+J2,1,JST PH2.0 Battery,,,,,${EXCLUDE_FROM_POS_FILES},Connector_JST:JST_PH_B2B-PH-SM4-TB_1x02-1MP_P2.00mm_Vertical,"Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+J3,1,Grove,,,,,${EXCLUDE_FROM_POS_FILES},Connector_JST:JST_PH_B4B-PH-SM4-TB_1x04-1MP_P2.00mm_Vertical,"Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+J4,1,Stemma PH,,,,,${EXCLUDE_FROM_POS_FILES},Grove:GROVE-HW4-SMD-2.0,"Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+J5,1,Header_02x12,,,,,${EXCLUDE_FROM_POS_FILES},Connector_PinHeader_2.54mm:PinHeader_2x12_P2.54mm_Vertical_SMD,"Generic connector, double row, 02x12, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+LS2,1,MLT-8530,,,,,${EXCLUDE_FROM_POS_FILES},Cobble_Library:MLT-8530,Speaker
+Q1,1,SI2302DS,,,,,${EXCLUDE_FROM_POS_FILES},Package_TO_SOT_SMD:SOT-23_Handsoldering,"N-MOSFET transistor, gate/source/drain"
+R1,1,GT36528,,,,,${EXCLUDE_FROM_POS_FILES},Cobble_Library:GT36528,light dependent resistor
+"R2,R3",2,10k,,,,,${EXCLUDE_FROM_POS_FILES},Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,"Resistor, US symbol"
+"R4,R5",2,4k7,DNP,,,,${EXCLUDE_FROM_POS_FILES},Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder,"Resistor, US symbol"
+"R6,R7",2,4k7,DNP,,,,${EXCLUDE_FROM_POS_FILES},Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P5.08mm_Horizontal,"Resistor, US symbol"
+SW1,1,Button,,,,,${EXCLUDE_FROM_POS_FILES},Cobble_Library:SW_Push_1P1T,"Push button switch, generic, two pins"
+SW3,1,X160 Vibration Sensor,,,,,${EXCLUDE_FROM_POS_FILES},Cobble_Library:X160,"1x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
+SW4,1,MSK22D27,,,,,${EXCLUDE_FROM_POS_FILES},Cobble_Library:MSK22D27,"Slide Switch, dual pole double throw"
+U1,1,ESP32-S3 Supermini,,,,,${EXCLUDE_FROM_POS_FILES},Cobble_Library:ESP32S3-supermini-v2,

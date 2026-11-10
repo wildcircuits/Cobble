@@ -1,32 +1,61 @@
-# Cobble Hardware Design
+# Cobble 
+
+Cobble is a development board designed to give easy access to sound, environment, and input while being easy to program with CircuitPython.
+
+## Features
+
+- ESP32-S3 Supermini module
+- Vibration Sensor
+- Light Sensor
+- RGB LED
+- Speaker
+- Button
+- Grove Connector
+- Stemma Connector
+- Battery Connector
+- Power Switch 
+- IO Header
+
+## Board revisions
+
+| Revision | Status | Notes |
+| --- | --- | --- |
+| **Rev 2** | **Current - first production run** | Fixed the Stemma connector, which was wired backwards on Rev 1 (the main change). Silkscreen updated, including a QR code. R3 (light sensor divider resistor) set to 10k - it worked at 1M as well, but 10k matches the other 10k resistor and reduces unique part count. Gerbers are in `Cobble-board/fab`. |
+| **Rev 1** | Design Validation | 2 layer board test with all features implemented.  Fabricated 3 boards at OSHPark. Established the current pin map (below). |
+| **Rev 0** | Concept Validation | Single-layer test board with seperate schematic and layout in `Cobble-board-test/` |
+
+Pins did not change between Rev 1 and Rev 2, so the pin map below applies to both.
 
 ## ESP32S3-supermini Pinout
+
 ![alt text](resources/diagram-3200.png)
 Link: https://www.espboards.dev/esp32/esp32-s3-super-mini/
 
-## Cobble-board-test
-the Cobble-board-test/ folder contains the single layer layout design used for the cobble smoke test board.  
+## Pin mapping 
 
-### Pin mapping
 | ESP32-S3-super-mini Pin | Function | Notes | CircuitPython |
 | --- | --- | --- | --- |
-| GPIO5 / ADC1_CH4 | Light Sensor | Read analog value for representative light level measurements. | board.A4 |
-| GPIO39 | Light Sensor | this pin is digital only and should be set to input no pull up/down | board.IO39 |
-| GPIO40 | Vibration Sensor | configure pin as input with pull up.  vibration will be active low | board.IO40 |
-| GPIO9 | PushButton | configure pin as input with pull up.  PushButton will be active low | board.IO9 |
-| GPIO8 | Buzzer | **Never leave high!**.  set as output low when not in use.  drive with PWM 50% duty cycle to create sound | board.IO8 |
-| GPIO6 | SCL | Use for I2C communications with device on J3 Stemma or J4 Grove connectors | board.IO6 |
-| GPIO7 | SDA | Use for I2C communications with devices on J3 Stemma or J4 Grove connectors | board.IO7 |
-| GPIO48 | neopixel | neopixel is attached to this pin | board.IO48 |
+| GPIO7 | Light Sensor | Analog read with `analogio.AnalogIn`. GPIO7 is analog-capable, so it maps to A6. | `board.A6` |
+| GPIO35 | PushButton | Configure as input with pull up. PushButton is active low. | `board.IO35` |
+| GPIO9 | Vibration Sensor | Configure as input with pull up. Vibration is active low. | `board.IO9` |
+| GPIO8 | Buzzer | **Never leave high!** Set as output low when not in use. Drive with PWM 50% duty cycle to create sound. | `board.IO8` |
+| GPIO48 | NeoPixel | RGB status LED. | `board.IO48` |
+| GPIO16 | SCL | I2C for the J3 Stemma and J4 Grove connectors. 4k7 pull-up pads on the board (R4-R7) are do-not-place, so pull-ups come from the attached device. | `board.IO16` |
+| GPIO17 | SDA | I2C for the J3 Stemma and J4 Grove connectors. 4k7 pull-up pads on the board (R4-R7) are do-not-place, so pull-ups come from the attached device. | `board.IO17` |
+| GPIO1, GPIO2, GPIO4, GPIO5, GPIO6, GPIO15 | Header GPIOs | General-purpose header pins aligned with power and ground pairs. | `board.IOx` |
+| GPIO10, GPIO11, GPIO12, GPIO13 | Header GPIOs (SPI) | Header pins aligned for SPI (native SPI pins). | `board.IOx` |
 
+Reference example code using the full Rev 1 pin map: `CircuitPython/Cobble-Rev1/test/code.py`.
 
-### Design notes
+## Design notes
+
 Note about 5V Power:
 - When USB is connected this will be 5V from VBUS
 - When running from a battery this will be Vbatt-V_protection_diode
 - Battery can only charge when USB is connected and power switch is 'ON'
 
-### CicuitPython Notes
+## CircuitPython Notes
+
 Testing completed with: 
 - Version: 10.3.1
 - Using the ESP32-S3-Zero build of CircuitPython.  It is a good standin for the super mini on our board: https://circuitpython.org/board/waveshare_esp32_s3_zero/
@@ -38,29 +67,39 @@ Testing completed with:
   - UID
   - MAC
 
-#### Tips & tricks
+### Tips & tricks
 - **Pin objects**: 
-  - Digital pins are `board.IOx` (e.g. `board.IO9`)
-  - The analog light pin is `board.A4` (GPIO5 / ADC1_CH4).
+  - Digital pins are `board.IOx` (e.g. `board.IO35` for the pushbutton)
+  - The analog light sensor is `board.A6` (GPIO7).
 - **Analog input**: 
   - Use `analogio.AnalogIn(pin)`. There is no `board.ADC()`.
   - Read the value with `.value` (0–65535)
 - **Digital input**: 
   - set direction with `digitalio.Direction.INPUT`
+  - button (GPIO35) and vibration sensor (GPIO9) use `digitalio.Pull.UP` and read active low
 - **Digital input Pull UP / DOWN**: 
   - set a pull up with `.pull = digitalio.Pull.UP`
   - set a pull down with `.pull = digitalio.Pull.DOWN`
 - **I2C**: 
-  - Use `busio.I2C(scl_pin, sda_pin)` to configure the I2C
+  - Use `busio.I2C(scl_pin, sda_pin)` (e.g. `busio.I2C(board.IO16, board.IO17)`)
+  - The 4k7 pull-up pads (R4-R7) are do-not-place, so the bus may not initialize or get ACKs
+    until an attached device brings its own pull-ups.  Wrap I2C calls and re-scan in a loop so
+    a device plugged in mid-run is picked up without crashing.  You can install your own 4k7 resistors (0603 or leaded, not both) if desired.
+  - `scan()` only works while the bus is held with `try_lock()`
+  - GPIO16/17 are IOMUX-capable on the ESP32-S3, so `busio.I2C` is allowed on them.
+  - The REPL console is on USB, so GPIO16/17 are free for I2C.
 - **NeoPixel**: the constructor is `neopixel.NeoPixel(pin, n, brightness=...)` —
   the `pixel_bit_depth` keyword is not accepted on this build.
-- **Light Sensor**: due to a design issue the lightsensor is connected to IO39 and A4.  reading the light sensor is done with A4, but IO39 needs to be set as an input without configuring a pull up so it does not impact the reading of A4.
 
 ### Example Code Snippets
 #### **I2C**: Configure I2C bus and scan for devices
 ``` python
-i2c = busio.I2C(board.IO6, board.IO7)  # SCL, SDA for J3/J4 connectors
-def scan_i2c():`
+import board
+import busio
+
+i2c = busio.I2C(board.IO16, board.IO17)  # SCL, SDA for J3/J4 connectors
+
+def scan_i2c():
     """Scan the I2C bus and return list of connected device addresses."""
     devices = []
     if not i2c.try_lock():
@@ -75,10 +114,35 @@ def scan_i2c():`
     finally:
         i2c.unlock()
     return devices
-
 ```
+
+#### **Light Sensor**: Read the analog value (GPIO7 / A6)
+``` python
+import board
+import analogio
+
+light = analogio.AnalogIn(board.A6)
+print(light.value)  # 0-65535
+```
+
+#### **PushButton**: Input with pull up, active low (GPIO35)
+``` python
+import board
+import digitalio
+
+button = digitalio.DigitalInOut(board.IO35)
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP
+
+pressed = not button.value  # True when the button is pressed
+```
+
 #### **Speaker**: Configure pin for PWM and play tone
 ``` python
+import board
+import pwmio
+import time
+
 piezo = pwmio.PWMOut(board.IO8, frequency=440, duty_cycle=0, variable_frequency=True)
 
 # 8 notes of a C Major octave (C5 to C6) in Hertz
@@ -101,10 +165,11 @@ def startup_song():
     
     # Mute tone and clean up hardware resource
     piezo.duty_cycle = 0
-
 ```
+
 #### **RGB LED Neopixel**: Configure pin and show RGB colors
 ``` python
+import board
 import neopixel
 
 # Initialize NeoPixel on the default board pin (or replace board.NEOPIXEL with board.IOx)
@@ -136,7 +201,7 @@ def rainbow():
     pixel[0] = wheel(hue)
 ```
 
-#### Included modules:
+#### Included modules for CircuitPython 10.3.1:
 _asyncio
 _bleio
 _bleio (native)
